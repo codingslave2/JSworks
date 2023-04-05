@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 반복하기</title>
+    <style>
+        section{
+            width: 600px; 
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <h2>커피의 세계</h2>
+        <img src="./images/coffee-blue.jpg" alt="커피잔" id="pic">
+    </section>
+
+    <script>
+        let picture = ["./images/coffee-blue.jpg", "./images/coffee-pink.jpg", "./images/coffee-gray.jpg"];
+        let picIdx = 0;
+        let timeoutId; // 타임아웃 ID 저장
+
+        showSlide();
+
+        function showSlide(){
+            let img = document.getElementById("pic");
+            img.src = picture[picIdx];
+            picIdx++;
+
+            if(picIdx == picture.length){
+                picIdx = 0;
+            }
+
+            timeoutId = setTimeout(showSlide, 30); // 타임아웃 ID 저장
+            
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.code === "Escape") {
+                clearTimeout(timeoutId); // 타임아웃 제거
+            }
+        });
+    </script>
+</body>
+</html>
