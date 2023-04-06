@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeChild() 사용</title>
+    <script>
+        function myFunction(){
+            let list = document.getElementById("myList");
+            // list.removeChild(list.firstElementChild); 첫 자식 요소부터 삭제
+            // list.removeChild(list.lastElementChild); 마지막 자시 요소부터 삭제
+            // list.removeChild(list.children[2]); 특정 위치에서 삭제
+            // list.removeChild(list.children[1].nextElementSibling); 근처 요소 삭제
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>removeChild() 사용</h2>
+    <button onclick="myFunction(); this.onclick='' ">삭제</button>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>
+</body>
+</html>
