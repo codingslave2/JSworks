@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리(Media Query)</title>
+    <style>
+        /* 이미지 기준 */
+        body{
+            background: url("images/doit.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        /* 가로 너비가 768px 미만이면 */
+        @media screen and (max-width: 767px){
+            body{
+                background: url("images/doit.jpg") no-repeat;
+            }
+        }
+
+        /* 가로 너비가 768px 이상이면 */
+        @media screen and (min-width: 768px){
+            body{
+                background: url("images/other.jpg") no-repeat;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        Responsive web
+    </div>
+</body>
+</html>

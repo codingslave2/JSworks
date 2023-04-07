@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+body{background: rgb(15, 15, 161);}
+#container{width: 320; margin: 0 auto;}
+.card{width: 300px; height: 550px; background: #fff; margin: 10px;
+position: relative; border-radius: 5px;}
+.word{position: absolute; top: 300px; left: 10px; text-align: center;}
+h2{font-size: 1.5em;}
+
+/* 태블릿 사용 */
+@media screen and (min-width: 768px){
+    #container{width: 570px;}
+    .card{width: 550px; height: 250px; position: relative;
+        margin: 10px;}
+    .word{position: absolute; top: 50px; left: 310px;}
+}
+
+/* pc 기준 */
+@media screen and (min-width: 1024px) {
+    #container{width: 1710px;}
+    .card{float: left; margin: 0 10px;}
+}

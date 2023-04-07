@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 속성 사용</title>
+    <style>
+        div{
+            width: 250px;
+            border: 5px solid #000;
+            padding: 20px 10px; 
+            position: absolute;
+            top: 150px;
+            left: 100px;
+
+            /* transition-property: width, height;
+            transition-duration: 2s, 1s; */
+
+
+            transition : all 2s 3ase-out;
+
+        /* ease-in - 느리게 시작
+            ease-out -느리게끝남
+            ease-in-out - 느리게 시작해서 느리게 끝남    
+            */
+        }
+        div:hover{
+            -webkit-transform: rotate(-360deg);
+            -ms-transform: rotate(-360deg);
+            -moz-transform: rotate(-360deg);
+            -o-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+
+            transition: 5s;
+
+            border: 5px solid blue;
+            transition: transform, border, 5s, 5s;
+        }
+        h1{
+            text-align: center; margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Mouseover</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 속성</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 50px;
+            background: aquamarine;
+
+            /* 애니메이션 이름 정의 */
+            animation-name: change-box;
+            /* 애니메이션 지속 시간 */
+            animation-duration: 5s;
+            /* 애니메이션 반복 횟수 */
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes change-box{
+            from{
+                background: aquamarine;
+                border: 1px solid black;
+            }
+            to{
+                background: blue;
+                border: 1px solid white;
+                border-radius: 20%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
